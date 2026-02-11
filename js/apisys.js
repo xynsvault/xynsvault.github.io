@@ -52,6 +52,7 @@ usernameBtn.addEventListener('click', async () => {
 		DOMParser.username = data.username
 		DOMParser.password = data.password
 		DOMParser.api = data.api
+		DOMParser.locked = data.locked
 		
             } else {
                 usernameBtn.style["background-color"]="#990000"
@@ -158,8 +159,15 @@ apiBtn.addEventListener('click', async () => {
 		apiBtn.className = "button-dis"
 		document.getElementById('apiX').disabled = "disabled"
 		document.getElementById('apiX').className = "input-dis"
+
+				if(DOMParser.locked == "true") {
+					document.getElementById("shouldntShareThisText").innerHTML = ' Your account is locked. Contact Xynfinity for help. ';
+					document.getElementById("shouldntShareThisText").style.color = 'red';
+				} else {
 		
 		setTimeout(function(){DOMParser.okyouregood()},1000,false)
+
+				}
 		
             } else {
                 apiBtn.style["background-color"]="#990000"
