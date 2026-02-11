@@ -88,6 +88,8 @@ setTimeout(function(){downloadLevel.window.location="https://www.google.com"},10
                     downloadBtn.className = "button-dis download-btn";
                     document.querySelectorAll('.xv-key-input').forEach(input => {
                     input.value = "";
+                    document.querySelectorAll('.download-btn').forEach(button => {
+                    button.disabled = "true";
     });
                 })
                 .catch(err => console.error("Error destroying key:", err));
