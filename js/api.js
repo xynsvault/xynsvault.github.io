@@ -1,8 +1,8 @@
 DOMParser.okyouregood = function() {
 
 document.body.innerHTML = `
-<h1 style="position:relative;top:30%">Xynfinity's Vault</h1>
-<ul style="list-style:none;display: flex;top:30%;">
+<h1 style="position:relative;top:60%">Xynfinity's Vault</h1>
+<ul style="list-style:none;display: flex;top:60%;">
 <li class="level-container" disabled="">
 <h2 style="font-size:30px;">KOCMOC UNLEASHED</h2>
 <embed style="width:425px;height:240px;" src="https://www.youtube.com/embed/mL0y4HWpPlU"><p></p><div style="background:#3d3d3d;padding:5px;border-radius:8px;width:550px;"><h3>LEVEL INFO:</h3><p style="user-select:none;opacity:0;"></p><h>Level I've been looking for day in and day out. Finally.</h><p style="user-select:none;opacity:0;"></p><pre style="position:relative;width:150px;text-align:left!important;">Creator: CherryTeam
@@ -28,10 +28,10 @@ Gameplay Status: Up To Date
 <button class="button-dis download-btn" id="apiBtn" disabled="" title="GRIEF">Download</button></div>
 </li></ul>
 
-<ul style="list-style:none;display: flex;top:30%;">
+<ul style="list-style:none;display: flex;top:60%;">
 <li class="level-container" disabled="">
 <h2 style="font-size:30px;">Ascension To Heaven</h2>
-<embed style="width:425px;height:240px;" src="https://www.youtube.com/embed/a9CejN1JuJU"><p></p><div style="background:#3d3d3d;padding:5px;border-radius:8px;width:550px;"><h3>LEVEL INFO:</h3><p style="user-select:none;opacity:0;"></p><h>Level I've been looking for day in and day out. Finally.</h><p style="user-select:none;opacity:0;"></p><pre style="position:relative;width:150px;text-align:left!important;">Creator: CherryTeam
+<embed style="width:425px;height:240px;" src="https://www.youtube.com/embed/a9CejN1JuJU"><p></p><div style="background:#3d3d3d;padding:5px;border-radius:8px;width:550px;"><h3>LEVEL INFO:</h3><p style="user-select:none;opacity:0;"></p><h>Level I've been looking for day in and day out. Finally.</h><p style="user-select:none;opacity:0;"></p><pre style="position:relative;width:150px;text-align:left!important;">Creator: Blueskii
 Type: Layout
 Decoration Status: Extra Effects
 Gameplay Status: Up To Date
@@ -43,7 +43,7 @@ Gameplay Status: Up To Date
 </li><a style="opacity:0;user-select:none;">seperate</a>
 <li class="level-container" disabled="">
 <h2 style="font-size:30px;">Vehemence</h2>
-<embed style="width:425px;height:240px;" src="https://www.youtube.com/embed/FwxtJQQocKA"><p></p><div style="background:#3d3d3d;padding:5px;border-radius:8px;width:550px;"><h3>LEVEL INFO:</h3><p style="user-select:none;opacity:0;"></p><h>wPopoffs copy and whatnot :D</h><p style="user-select:none;opacity:0;"></p><pre style="position:relative;width:150px;text-align:left!important;">Creator: IcEDCave
+<embed style="width:425px;height:240px;" src="https://www.youtube.com/embed/FwxtJQQocKA"><p></p><div style="background:#3d3d3d;padding:5px;border-radius:8px;width:550px;"><h3>LEVEL INFO:</h3><p style="user-select:none;opacity:0;"></p><h>wPopoffs copy and whatnot :D</h><p style="user-select:none;opacity:0;"></p><pre style="position:relative;width:150px;text-align:left!important;">Creator: MadisonYuko
 Type: FULL LEVEL
 Decoration Status: Up To Date
 Gameplay Status: Up To Date
@@ -52,6 +52,32 @@ Gameplay Status: Up To Date
 <div class="button-container">
 <input class="input-dis xv-key-input" placeholder="XV Key">
 <button class="button-dis download-btn" id="apiBtn" disabled="" title="Vehemence">Download</button></div>
+</li></ul>
+
+<ul style="list-style:none;display: flex;top:60%;">
+<li class="level-container" disabled="">
+<h2 style="font-size:30px;">Flashbang</h2>
+<embed style="width:425px;height:240px;" src="https://www.youtube.com/embed/2j9nLPyE2Tw"><p></p><div style="background:#3d3d3d;padding:5px;border-radius:8px;width:550px;"><h3>LEVEL INFO:</h3><p style="user-select:none;opacity:0;"></p><h>This one hurts my eyes</h><p style="user-select:none;opacity:0;"></p><pre style="position:relative;width:150px;text-align:left!important;">Creator: LordVadercraft
+Type: FULL LEVEL
+Decoration Status: Up To Date
+Gameplay Status: Up To Date
+</pre>
+</div>
+<div class="button-container">
+<input class="input-dis xv-key-input" placeholder="XV Key">
+<button class="button-dis download-btn" id="apiBtn" disabled="" title="Flashbang">Download</button></div>
+</li><a style="opacity:0;user-select:none;">seperate</a>
+<li class="level-container" disabled="">
+<h2 style="font-size:30px;">TEETH FORTRESS II</h2>
+<embed style="width:425px;height:240px;" src="https://www.youtube.com/embed/QbrkUUSW_H0"><p></p><div style="background:#3d3d3d;padding:5px;border-radius:8px;width:550px;"><h3>LEVEL INFO:</h3><p style="user-select:none;opacity:0;"></p><h>worst fucking level ive ever seen in my life.</h><p style="user-select:none;opacity:0;"></p><pre style="position:relative;width:150px;text-align:left!important;">Creator: Koko
+Type: FULL LEVEL
+Decoration Status: Up To Date
+Gameplay Status: Up To Date
+</pre>
+</div>
+<div class="button-container">
+<input class="input-dis xv-key-input" placeholder="XV Key">
+<button class="button-dis download-btn" id="apiBtn" disabled="" title="TEETH FORTRESS II">Download</button></div>
 </li></ul>
   `
 
