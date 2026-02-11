@@ -49,6 +49,7 @@ document.querySelectorAll('.level-container').forEach(card => {
 
         if (enteredKey === "") {
             downloadBtn.disabled = true;
+            downloadBtn.className = "button-dis download-btn";
             return;
         }
 
