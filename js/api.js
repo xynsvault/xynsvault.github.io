@@ -4,8 +4,7 @@ document.body.innerHTML = `
 <div style="display:flex;z-index:10000;background-color:#1b1b1b;position:fixed;top:-0%;width:100%;"><h1 style="margin-left:1%;">Xynfinity's Vault</h1><input style="color:white;background-color:#1b1b1b;text-align:center;font-size:20px;position:fixed;left:36.6%;top:6%;width:500px;height:50px;border-style:none;border-radius:16px;" type="text" id="levelSearch" placeholder="Search Level Name" onkeyup="filterLevels()"><a style="margin-left:1%;position:fixed;left:79%;">Level missing? Give me a name, I'll look for it.</a><input style="position:fixed;width:200px!important;top:2%;left:80%;" id="requestLevelInput" placeholder="Enter Level Name..." class="input">
     <button style="position:fixed;width:100px!important;top:1.5%;left:92%;" class="button" id="requestBtn">Request Level</button></div>
     
-<ul style="list-style:none;display: flex;top:100%;">
-<li class="level-container" disabled="">
+<ul class="level-list"><li class="level-container" disabled="" title="KOCMOC UNLEASHED">
 <h2 style="font-size:30px;">KOCMOC UNLEASHED</h2>
 <embed style="width:425px;height:240px;" src="https://www.youtube.com/embed/mL0y4HWpPlU"><p></p><div style="background:#3d3d3d;padding:5px;border-radius:8px;width:550px;"><h3>LEVEL INFO:</h3><p style="user-select:none;opacity:0;"></p><h>Level I've been looking for day in and day out. Finally.</h><p style="user-select:none;opacity:0;"></p><pre style="position:relative;width:150px;text-align:left!important;">Creator: CherryTeam
 Type: FULL LEVEL
@@ -16,8 +15,7 @@ Gameplay Status: Up To Date
 <div class="button-container">
 <input class="input-dis xv-key-input" placeholder="XV Key">
 <button class="button-dis download-btn" id="apiBtn" disabled="" title="KOCMOC UNLEASHED">Download</button></div><h style="position:relative;top:1.5%;color:#444444" class="isKeyValid">NO KEY ENTERED</h>
-</li><a style="opacity:0;user-select:none;">seperate</a>
-<li class="level-container" disabled="">
+</li><li class="level-container" disabled="">
 <h2 style="font-size:30px;">GRIEF</h2>
 <embed style="width:425px;height:240px;" src="https://www.youtube.com/embed/jYXxoDywnAE"><p></p><div style="background:#3d3d3d;padding:5px;border-radius:8px;width:550px;"><h3>LEVEL INFO:</h3><p style="user-select:none;opacity:0;"></p><h>"Just be doggies copy" Brutal.</h><p style="user-select:none;opacity:0;"></p><pre style="position:relative;width:150px;text-align:left!important;">Creator: IcEDCave
 Type: FULL LEVEL
@@ -28,10 +26,7 @@ Gameplay Status: Up To Date
 <div class="button-container">
 <input class="input-dis xv-key-input" placeholder="XV Key">
 <button class="button-dis download-btn" id="apiBtn" disabled="" title="GRIEF">Download</button></div><h style="position:relative;top:1.5%;color:#444444" class="isKeyValid">NO KEY ENTERED</h>
-</li></ul>
-
-<ul style="list-style:none;display: flex;top:100%;">
-<li class="level-container" disabled="">
+</li><li disabled="" class="level-container">
 <h2 style="font-size:30px;">Ascension To Heaven</h2>
 <embed style="width:425px;height:240px;" src="https://www.youtube.com/embed/a9CejN1JuJU"><p></p><div style="background:#3d3d3d;padding:5px;border-radius:8px;width:550px;"><h3>LEVEL INFO:</h3><p style="user-select:none;opacity:0;"></p><h>Are you ready to ascend?</h><p style="user-select:none;opacity:0;"></p><pre style="position:relative;width:150px;text-align:left!important;">Creator: Blueskii
 Type: Layout
@@ -42,8 +37,7 @@ Gameplay Status: Up To Date
 <div class="button-container">
 <input class="input-dis xv-key-input" placeholder="XV Key">
 <button class="button-dis download-btn" id="apiBtn" disabled="" title="Ascension To Heaven">Download</button></div><h style="position:relative;top:1.5%;color:#444444" class="isKeyValid">NO KEY ENTERED</h>
-</li><a style="opacity:0;user-select:none;">seperate</a>
-<li class="level-container" disabled="">
+</li><li class="level-container" disabled="">
 <h2 style="font-size:30px;">Vehemence</h2>
 <embed style="width:425px;height:240px;" src="https://www.youtube.com/embed/FwxtJQQocKA"><p></p><div style="background:#3d3d3d;padding:5px;border-radius:8px;width:550px;"><h3>LEVEL INFO:</h3><p style="user-select:none;opacity:0;"></p><h>wPopoffs copy and whatnot :D</h><p style="user-select:none;opacity:0;"></p><pre style="position:relative;width:150px;text-align:left!important;">Creator: MadisonYuko
 Type: FULL LEVEL
@@ -54,10 +48,7 @@ Gameplay Status: Up To Date
 <div class="button-container">
 <input class="input-dis xv-key-input" placeholder="XV Key">
 <button class="button-dis download-btn" id="apiBtn" disabled="" title="Vehemence">Download</button></div><h style="position:relative;top:1.5%;color:#444444" class="isKeyValid">NO KEY ENTERED</h>
-</li></ul>
-
-<ul style="list-style:none;display: flex;top:100%;">
-<li class="level-container" disabled="">
+</li><li class="level-container" disabled="">
 <h2 style="font-size:30px;">Flashbang</h2>
 <embed style="width:425px;height:240px;" src="https://www.youtube.com/embed/2j9nLPyE2Tw"><p></p><div style="background:#3d3d3d;padding:5px;border-radius:8px;width:550px;"><h3>LEVEL INFO:</h3><p style="user-select:none;opacity:0;"></p><h>This one hurts my eyes</h><p style="user-select:none;opacity:0;"></p><pre style="position:relative;width:150px;text-align:left!important;">Creator: LordVadercraft
 Type: FULL LEVEL
@@ -68,8 +59,7 @@ Gameplay Status: Up To Date
 <div class="button-container">
 <input class="input-dis xv-key-input" placeholder="XV Key">
 <button class="button-dis download-btn" id="apiBtn" disabled="" title="Flashbang">Download</button></div><h style="position:relative;top:1.5%;color:#444444" class="isKeyValid">NO KEY ENTERED</h>
-</li><a style="opacity:0;user-select:none;">seperate</a>
-<li class="level-container" disabled="">
+</li><li class="level-container" disabled="">
 <h2 style="font-size:30px;">TEETH FORTRESS II</h2>
 <embed style="width:425px;height:240px;" src="https://www.youtube.com/embed/QbrkUUSW_H0"><p></p><div style="background:#3d3d3d;padding:5px;border-radius:8px;width:550px;"><h3>LEVEL INFO:</h3><p style="user-select:none;opacity:0;"></p><h>worst fucking level ive ever seen in my life.</h><p style="user-select:none;opacity:0;"></p><pre style="position:relative;width:150px;text-align:left!important;">Creator: Koko
 Type: FULL LEVEL
@@ -80,10 +70,7 @@ Gameplay Status: Up To Date
 <div class="button-container">
 <input class="input-dis xv-key-input" placeholder="XV Key">
 <button class="button-dis download-btn" id="apiBtn" disabled="" title="TEETH FORTRESS II">Download</button></div><h style="position:relative;top:1.5%;color:#444444" class="isKeyValid">NO KEY ENTERED</h>
-</li></ul>
-
-<ul style="list-style:none;display: flex;top:100%;">
-<li class="level-container" disabled="">
+</li><li class="level-container" disabled="">
 <h2 style="font-size:30px;">I N J U R Y</h2>
 <embed style="width:425px;height:240px;" src="https://www.youtube.com/embed/bqZL6QKsDZI"><p></p><div style="background:#3d3d3d;padding:5px;border-radius:8px;width:550px;"><h3>LEVEL INFO:</h3><p style="user-select:none;opacity:0;"></p><h>In the top 5 levels of all time. Change my mind.</h><p style="user-select:none;opacity:0;"></p><pre style="position:relative;width:150px;text-align:left!important;">Creator: IcEDCave
 Type: FULL LEVEL
@@ -94,8 +81,7 @@ Gameplay Status: Up To Date
 <div class="button-container">
 <input class="input-dis xv-key-input" placeholder="XV Key">
 <button class="button-dis download-btn" id="apiBtn" disabled="" title="I N J U R Y">Download</button></div><h style="position:relative;top:1.5%;color:#444444" class="isKeyValid">NO KEY ENTERED</h>
-</li><a style="opacity:0;user-select:none;">seperate</a>
-<li class="level-container" disabled="">
+</li><li class="level-container" disabled="">
 <h2 style="font-size:30px;">Fire And Flames</h2>
 <embed style="width:425px;height:240px;" src="https://www.youtube.com/embed/dWHKYN1pfyE"><p></p><div style="background:#3d3d3d;padding:5px;border-radius:8px;width:550px;"><h3>LEVEL INFO:</h3><p style="user-select:none;opacity:0;"></p><h>Not to be confused with Through The Fire And Flames</h><p style="user-select:none;opacity:0;"></p><pre style="position:relative;width:150px;text-align:left!important;">Creator: AkiraaHSR
 Type: FULL LEVEL
@@ -165,16 +151,16 @@ Gameplay Status: Up To Date
     
     // 2. Select all your level buttons/elements
     // Change '.level-btn' to whatever class your buttons use
-    const buttons = document.querySelectorAll('.level-btn');
+    const buttons = document.querySelectorAll('.level-container');
 
-    buttons.forEach(btn => {
+    buttons.forEach(li => {
         // Use the title or text inside the button to compare
-        const levelName = btn.title.toLowerCase();
+        const levelName = li.title.toLowerCase();
         
         if (levelName.includes(filter)) {
-            btn.style.display = ""; // Show it
+            li.style.display = ""; // Show it
         } else {
-            btn.style.display = "none"; // Hide it
+            li.style.display = "none"; // Hide it
         }
     });
 }
