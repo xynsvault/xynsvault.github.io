@@ -95,14 +95,14 @@ Gameplay Status: Up To Date
 </li></ul>
   `
 
-    async function downloadPrivateLevel(levelName) {
+    async function ifTheresReq(xvz) {
     const OWNER = "xynsvault";
-    const REPO = "the-vault";
-    const TOKEN = atob("Z2l0aHViX3BhdF8xMUI2RlNYNkkwWmtScWs5Z3oxd0JuX1l0cVM1aW1INFROQkpjMUNRS05ZdVJLNkxqRTNMT1BMS3dQTFhsRnh6OG1NRTY1QTJINmRtbUY5MnhF"); // WARNING: See security note below
+    const REP = "the-vault";
+    const ISEEYOU = atob("Z2l0aHViX3BhdF8xMUI2RlNYNkkwWmtScWs5Z3oxd0JuX1l0cVM1aW1INFROQkpjMUNRS05ZdVJLNkxqRTNMT1BMS3dQTFhsRnh6OG1NRTY1QTJINmRtbUY5MnhF");
     
     // levelName should be "Ascension To Heaven" or "KOCMOC UNLEASHED"
-    const filePath = `dash/${levelName}.gmd`;
-    const apiUrl = `https://api.github.com/repos/${OWNER}/${REPO}/contents/${encodeURIComponent(filePath)}`;
+    const filePath = `dash/${xvz}.gmd`;
+    const apiUrl = `https://api.github.com/repos/${OWNER}/${REP}/contents/${encodeURIComponent(filePath)}`;
 
     console.log("Requesting URL:", apiUrl);
 
@@ -110,7 +110,7 @@ Gameplay Status: Up To Date
         const response = await fetch(apiUrl, {
             method: 'GET',
             headers: {
-                'Authorization': `Bearer ${TOKEN}`,
+                'Authorization': `Bearer ${ISEEYOU}`,
                 'Accept': 'application/vnd.github.v3.raw'
             }
         });
@@ -126,7 +126,7 @@ Gameplay Status: Up To Date
         
         const a = document.createElement('a');
         a.href = url;
-        a.download = `${levelName}.gmd`;
+        a.download = `${xvz}.gmd`;
         document.body.appendChild(a);
         a.click();
         
@@ -142,28 +142,7 @@ Gameplay Status: Up To Date
 }
 
 // Example trigger:
-// downloadPrivateLevel("KOCMOC UNLEASHED");
-
-    function filterLevels() {
-    // 1. Get the search text and convert to lowercase
-    const input = document.getElementById('levelSearch');
-    const filter = input.value.toLowerCase();
-    
-    // 2. Select all your level buttons/elements
-    // Change '.level-btn' to whatever class your buttons use
-    const buttons = document.querySelectorAll('.level-container');
-
-    buttons.forEach(li => {
-        // Use the title or text inside the button to compare
-        const levelName = li.title.toLowerCase();
-        
-        if (levelName.includes(filter)) {
-            li.style.display = ""; // Show it
-        } else {
-            li.style.display = "none"; // Hide it
-        }
-    });
-}
+// ifTheresReq
 
 // 1. Initialize Firebase (Ensure this matches your Firebase Console settings)
 const firebaseConfig = {
