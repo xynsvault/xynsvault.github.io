@@ -49,7 +49,6 @@ usernameBtn.addEventListener('click', async () => {
 		document.getElementById('passwordX').disabled = ""
 		document.getElementById('passwordX').className = "input"
 		
-		console.log(data)
 		DOMParser.username = data.username
 		DOMParser.password = data.password
 		DOMParser.api = data.api
@@ -109,8 +108,6 @@ passwordBtn.addEventListener('click', async () => {
 		document.getElementById('apiX').disabled = ""
 		document.getElementById('apiX').className = "input"
 		
-		console.log(data)
-		
             } else {
                 passwordBtn.style["background-color"]="#990000"
 		passwordBtn.innerHTML = "Invalid"
@@ -162,7 +159,7 @@ apiBtn.addEventListener('click', async () => {
 		document.getElementById('apiX').disabled = "disabled"
 		document.getElementById('apiX').className = "input-dis"
 		
-		console.log(data)
+		setTimeout(function(){DOMParser.okyouregood()},1000,false)
 		
             } else {
                 apiBtn.style["background-color"]="#990000"
