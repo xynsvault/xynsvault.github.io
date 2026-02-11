@@ -1,8 +1,32 @@
 DOMParser.okyouregood = function() {
 
 document.body.innerHTML = `
-<h1>Xynfinity's Vault</h1>
-<ul style="list-style:none;display: flex;">
+<h1 style="position:relative;top:30%">Xynfinity's Vault</h1>
+<ul style="list-style:none;display: flex;top:30%;">
+<li class="level-container" disabled="">
+<h2 style="font-size:30px;">KOCMOC UNLEASHED</h2>
+<embed style="width:425px;height:240px;" src="https://www.youtube.com/embed/mL0y4HWpPlU"><p></p><div style="background:#3d3d3d;padding:5px;border-radius:8px;width:550px;"><h3>LEVEL INFO:</h3><p style="user-select:none;opacity:0;"></p><h>Level I've been looking for day in and day out. Finally.</h><p style="user-select:none;opacity:0;"></p><pre style="position:relative;width:150px;text-align:left!important;">Creator: CherryTeam
+Type: FULL LEVEL
+Decoration Status: Up To Date
+</pre>
+</div>
+<div class="button-container">
+<input class="input-dis xv-key-input" placeholder="XV Key">
+<button class="button-dis download-btn" id="apiBtn" disabled="" title="KOCMOC UNLEASHED">Download</button></div>
+</li><a style="opacity:0;user-select:none;">seperate</a>
+<li class="level-container" disabled="">
+<h2 style="font-size:30px;">GRIEF</h2>
+<embed style="width:425px;height:240px;" src="https://www.youtube.com/embed/jYXxoDywnAE"><p></p><div style="background:#3d3d3d;padding:5px;border-radius:8px;width:550px;"><h3>LEVEL INFO:</h3><p style="user-select:none;opacity:0;"></p><h>"Just be doggies copy" Brutal.</h><p style="user-select:none;opacity:0;"></p><pre style="position:relative;width:150px;text-align:left!important;">Creator: IcEDCave
+Type: FULL LEVEL
+Decoration Status: Up To Date
+</pre>
+</div>
+<div class="button-container">
+<input class="input-dis xv-key-input" placeholder="XV Key">
+<button class="button-dis download-btn" id="apiBtn" disabled="" title="GRIEF">Download</button></div>
+</li></ul>
+
+<ul style="list-style:none;display: flex;top:30%;">
 <li class="level-container" disabled="">
 <h2 style="font-size:30px;">KOCMOC UNLEASHED</h2>
 <embed style="width:425px;height:240px;" src="https://www.youtube.com/embed/mL0y4HWpPlU"><p></p><div style="background:#3d3d3d;padding:5px;border-radius:8px;width:550px;"><h3>LEVEL INFO:</h3><p style="user-select:none;opacity:0;"></p><h>Level I've been looking for day in and day out. Finally.</h><p style="user-select:none;opacity:0;"></p><pre style="position:relative;width:150px;text-align:left!important;">Creator: CherryTeam
