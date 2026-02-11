@@ -192,11 +192,12 @@
             li.style.display = ""; // Show it
 			li.style.position = "fixed";
 			li.style.top = "15%";
-        } if (filter == "") {
-			li.style="";
-		} else {
+        } else {
             li.style.display = "none"; // Hide it
-        }
+        };
+		if (filter == "") {
+			li.style="";
+		} 
     });
 }
 	</script>
