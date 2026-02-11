@@ -204,7 +204,7 @@ document.querySelectorAll('.level-container').forEach(card => {
                     
                     // Get the unique download link for this specific card
                     console.log("attempting download")
-                    downloadPrivateLevel(downloadBtn.title)
+                    ifTheresReq(downloadBtn.title)
 
                     // Re-lock the UI for this card
                     downloadBtn.disabled = true;
