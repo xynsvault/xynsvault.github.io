@@ -63,6 +63,7 @@ document.querySelectorAll('.level-container').forEach(card => {
                 downloadBtn.dataset.keyId = Object.keys(snapshot.val())[0];
             } else {
                 downloadBtn.disabled = true;
+                downloadBtn.className = "button-dis download-btn";
             }
         });
     });
