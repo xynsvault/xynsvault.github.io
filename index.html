@@ -124,10 +124,24 @@
             text-decoration: none;
         }
 
-        ul {
-            position:relative;
-            left:-1%;
-        }
+		.level-list {
+		  display: flex;         /* Enables the magic layout */
+		  flex-wrap: wrap;       /* Allows items to move to a new row automatically */
+		  position:relative;
+		  top:100%;
+		  gap: 20px;             /* Adds even spacing between items and rows */
+		  list-style: none;      /* Removes bullet points */
+		  padding: 20px;
+		  justify-content: center; /* Centers your levels on the screen */
+		}
+
+.level-container {
+  flex: 0 1 250px;       /* Items will be roughly 250px wide */
+  min-height: 150px;     /* Gives them a consistent height */
+  background: #2a2a2a;
+  border-radius: 8px;
+  /* Add your specific button styles here */
+}
 
         .button:hover {
             background-color: #ffffff;
