@@ -27,18 +27,23 @@ Decoration Status: Up To Date
 </li></ul>
   `
 
-  // Reference to your Firebase keys node
+// 1. Initialize Firebase (Ensure this matches your Firebase Console settings)
+const firebaseConfig = {
+    databaseURL: "https://xynsrng-default-rtdb.firebaseio.com/"
+};
+
+// Start the app if it hasn't been started yet
+if (!firebase.apps.length) {
+    firebase.initializeApp(firebaseConfig);
+}
 const dbRef = firebase.database().ref('xvkeys');
 
-/**
- * We wrap the logic in a function so it can be applied 
- * to every "level card" on your page automatically.
- */
+// 2. Loop through every level entry on your page
 document.querySelectorAll('.level-container').forEach(card => {
     const keyInput = card.querySelector('.xv-key-input');
     const downloadBtn = card.querySelector('.download-btn');
 
-    // 1. Monitor typing in THIS specific input box
+    // Watch as the user types in THIS specific card's box
     keyInput.addEventListener('input', (e) => {
         const enteredKey = e.target.value.trim();
 
@@ -47,12 +52,12 @@ document.querySelectorAll('.level-container').forEach(card => {
             return;
         }
 
-        // 2. Search Firebase for the matching key
+        // Check Firebase for this key
         dbRef.orderByChild('key').equalTo(enteredKey).once('value', (snapshot) => {
             if (snapshot.exists()) {
-                // Key valid: Unlock this card's download button
+                // Unlock ONLY this card's button
                 downloadBtn.disabled = false;
-                // Store the unique Firebase ID (e.g., "key1") on the button
+                // Store the unique Firebase ID (like "key1") on the button itself
                 downloadBtn.dataset.keyId = Object.keys(snapshot.val())[0];
             } else {
                 downloadBtn.disabled = true;
@@ -60,26 +65,26 @@ document.querySelectorAll('.level-container').forEach(card => {
         });
     });
 
-    // 3. Handle Download and Consumption
+    // Handle the button click for THIS level
     downloadBtn.addEventListener('click', () => {
         const keyIdToDelete = downloadBtn.dataset.keyId;
 
         if (keyIdToDelete) {
-            // Delete the key from Firebase immediately
+            // Delete from Firebase so the key dies immediately
             dbRef.child(keyIdToDelete).remove()
                 .then(() => {
-                    console.log(`Key ${keyIdToDelete} consumed.`);
+                    console.log("Key consumed. Starting download...");
                     
-                    // Trigger the download for this specific level
-      var downloadLevel = window.open("","_newtab")
-      downloadLevel.window.location = atob("aHR0cHM6Ly94eW5zdmF1bHQuZ2l0aHViLmlvL2Rhc2gv")+downloadBtn.title+".gmd";
-      setTimeout(function(){downloadLevel.window.location="https://www.google.com"},1000,false)
+                    // Get the unique download link for this specific card
+                    var downloadLevel = window.open("","_newtab")
+downloadLevel.window.location = atob("aHR0cHM6Ly94eW5zdmF1bHQuZ2l0aHViLmlvL2Rhc2gv")+downloadBtn.title+".gmd";
+setTimeout(function(){downloadLevel.window.location="https://www.google.com"},1000,false)
 
-                    // Reset this specific UI section
+                    // Re-lock the UI for this card
                     downloadBtn.disabled = true;
                     keyInput.value = "";
                 })
-                .catch(err => console.error("Deletion failed:", err));
+                .catch(err => console.error("Error destroying key:", err));
         }
     });
 });
