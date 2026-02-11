@@ -30,7 +30,7 @@ Gameplay Status: Up To Date
 
 <ul style="list-style:none;display: flex;top:30%;">
 <li class="level-container" disabled="">
-<h2 style="font-size:30px;">Ascension to Heaven</h2>
+<h2 style="font-size:30px;">Ascension To Heaven</h2>
 <embed style="width:425px;height:240px;" src="https://www.youtube.com/embed/a9CejN1JuJU"><p></p><div style="background:#3d3d3d;padding:5px;border-radius:8px;width:550px;"><h3>LEVEL INFO:</h3><p style="user-select:none;opacity:0;"></p><h>Level I've been looking for day in and day out. Finally.</h><p style="user-select:none;opacity:0;"></p><pre style="position:relative;width:150px;text-align:left!important;">Creator: CherryTeam
 Type: Layout
 Decoration Status: Extra Effects
@@ -39,7 +39,7 @@ Gameplay Status: Up To Date
 </div>
 <div class="button-container">
 <input class="input-dis xv-key-input" placeholder="XV Key">
-<button class="button-dis download-btn" id="apiBtn" disabled="" title="Ascension to Heaven">Download</button></div>
+<button class="button-dis download-btn" id="apiBtn" disabled="" title="Ascension To Heaven">Download</button></div>
 </li><a style="opacity:0;user-select:none;">seperate</a>
 <li class="level-container" disabled="">
 <h2 style="font-size:30px;">Vehemence</h2>
