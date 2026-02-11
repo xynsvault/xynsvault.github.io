@@ -125,6 +125,8 @@
         }
 
 		.level-list {
+		  margin-top: 100px;     /* Adjust this value until it sits below your header */
+    	  width: 100%;           /* Ensure it spans the page */
 		  display: flex;         /* Enables the magic layout */
 		  flex-wrap: wrap;       /* Allows items to move to a new row automatically */
 		  position:relative;
@@ -136,7 +138,8 @@
 		}
 
 .level-container {
-  flex: 0 1 250px;       /* Items will be roughly 250px wide */
+  position: static; 
+  flex: 0 1 450px;       /* Gives them a base width similar to your screenshot */
   min-height: 150px;     /* Gives them a consistent height */
   background: #2a2a2a;
   border-radius: 8px;
