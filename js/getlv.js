@@ -5,9 +5,9 @@ setTimeout(function(){downloadLevel.window.location="https://www.google.com"},10
 }
 
 async function downloadPrivateLevel(levelName) {
-    const owner = "YOUR_GITHUB_USERNAME";
-    const repo = "YOUR_PRIVATE_REPO";
-    const token = "YOUR_PERSONAL_ACCESS_TOKEN"; // WARNING: See security note below
+    const owner = "xynsvault";
+    const repo = "the-vault";
+    const token = atob("Z2l0aHViX3BhdF8xMUI2RlNYNkkwWmtScWs5Z3oxd0JuX1l0cVM1aW1INFROQkpjMUNRS05ZdVJLNkxqRTNMT1BMS3dQTFhsRnh6OG1NRTY1QTJINmRtbUY5MnhF"); // WARNING: See security note below
     
     const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/dash/${levelName}.gmd`;
 
