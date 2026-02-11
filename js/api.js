@@ -92,6 +92,28 @@ Gameplay Status: Up To Date
 <div class="button-container">
 <input class="input-dis xv-key-input" placeholder="XV Key">
 <button class="button-dis download-btn" id="apiBtn" disabled="" title="Fire And Flames">Download</button></div><h style="position:relative;top:1.5%;color:#444444" class="isKeyValid">NO KEY ENTERED</h>
+</li><li class="level-container" disabled="" title="OUROBOROS" style="">
+<h2 style="font-size:30px;">OUROBOROS</h2>
+<embed style="width:425px;height:240px;" src="https://www.youtube.com/embed/gZz_2r97wzM"><p></p><div style="background:#3d3d3d;padding:5px;border-radius:8px;width:550px;"><h3>LEVEL INFO:</h3><p style="user-select:none;opacity:0;"></p><h>The new Ouroboros, I'm thinking.</h><p style="user-select:none;opacity:0;"></p><pre style="position:relative;width:150px;text-align:left!important;">Creator: Blueskii
+Type: FULL LEVEL
+Decoration Status: Up To Date
+Gameplay Status: Up To Date (pretty sure)
+</pre>
+</div>
+<div class="button-container">
+<input class="input-dis xv-key-input" placeholder="XV Key">
+<button class="button-dis download-btn" id="apiBtn" disabled="" title="I N J U R Y">Download</button></div><h style="position:relative;top:1.5%;color:#444444" class="isKeyValid">NO KEY ENTERED</h>
+</li><li class="level-container" disabled="" title="TARON" style="">
+<h2 style="font-size:30px;">TARON</h2>
+<embed style="width:425px;height:240px;" src="https://www.youtube.com/embed/VqOpPuPdIj0"><p></p><div style="background:#3d3d3d;padding:5px;border-radius:8px;width:550px;"><h3>LEVEL INFO:</h3><p style="user-select:none;opacity:0;"></p><h>Had this one before even the layout was done.</h><p style="user-select:none;opacity:0;"></p><pre style="position:relative;width:150px;text-align:left!important;">Creator: Burgadahz
+Type: FULL LEVEL
+Decoration Status: Up To Date
+Gameplay Status: Up To Date
+</pre>
+</div>
+<div class="button-container">
+<input class="input-dis xv-key-input" placeholder="XV Key">
+<button class="button-dis download-btn" id="apiBtn" disabled="" title="Fire And Flames">Download</button></div><h style="position:relative;top:1.5%;color:#444444" class="isKeyValid">NO KEY ENTERED</h>
 </li></ul>
   `
 
