@@ -57,6 +57,7 @@ document.querySelectorAll('.level-container').forEach(card => {
             if (snapshot.exists()) {
                 // Unlock ONLY this card's button
                 downloadBtn.disabled = false;
+                downloadBtn.className = "button download-btn";
                 // Store the unique Firebase ID (like "key1") on the button itself
                 downloadBtn.dataset.keyId = Object.keys(snapshot.val())[0];
             } else {
@@ -82,6 +83,7 @@ setTimeout(function(){downloadLevel.window.location="https://www.google.com"},10
 
                     // Re-lock the UI for this card
                     downloadBtn.disabled = true;
+                    downloadBtn.className = "button-dis download-btn";
                     keyInput.value = "";
                 })
                 .catch(err => console.error("Error destroying key:", err));
