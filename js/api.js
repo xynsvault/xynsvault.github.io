@@ -15,7 +15,7 @@ Gameplay Status: Up To Date
 </div>
 <div class="button-container">
 <input class="input-dis xv-key-input" placeholder="XV Key">
-<button class="button-dis download-btn" id="apiBtn" disabled="" title="KOCMOC UNLEASHED">Download</button></div>
+<button class="button-dis download-btn" id="apiBtn" disabled="" title="KOCMOC UNLEASHED">Download</button></div><h style="position:relative;top:1.5%;color:#444444" class="isKeyValid">NO KEY ENTERED</h>
 </li><a style="opacity:0;user-select:none;">seperate</a>
 <li class="level-container" disabled="">
 <h2 style="font-size:30px;">GRIEF</h2>
@@ -27,7 +27,7 @@ Gameplay Status: Up To Date
 </div>
 <div class="button-container">
 <input class="input-dis xv-key-input" placeholder="XV Key">
-<button class="button-dis download-btn" id="apiBtn" disabled="" title="GRIEF">Download</button></div>
+<button class="button-dis download-btn" id="apiBtn" disabled="" title="GRIEF">Download</button></div><h style="position:relative;top:1.5%;color:#444444" class="isKeyValid">NO KEY ENTERED</h>
 </li></ul>
 
 <ul style="list-style:none;display: flex;top:60%;">
@@ -41,7 +41,7 @@ Gameplay Status: Up To Date
 </div>
 <div class="button-container">
 <input class="input-dis xv-key-input" placeholder="XV Key">
-<button class="button-dis download-btn" id="apiBtn" disabled="" title="Ascension To Heaven">Download</button></div>
+<button class="button-dis download-btn" id="apiBtn" disabled="" title="Ascension To Heaven">Download</button></div><h style="position:relative;top:1.5%;color:#444444" class="isKeyValid">NO KEY ENTERED</h>
 </li><a style="opacity:0;user-select:none;">seperate</a>
 <li class="level-container" disabled="">
 <h2 style="font-size:30px;">Vehemence</h2>
@@ -53,7 +53,7 @@ Gameplay Status: Up To Date
 </div>
 <div class="button-container">
 <input class="input-dis xv-key-input" placeholder="XV Key">
-<button class="button-dis download-btn" id="apiBtn" disabled="" title="Vehemence">Download</button></div>
+<button class="button-dis download-btn" id="apiBtn" disabled="" title="Vehemence">Download</button></div><h style="position:relative;top:1.5%;color:#444444" class="isKeyValid">NO KEY ENTERED</h>
 </li></ul>
 
 <ul style="list-style:none;display: flex;top:60%;">
@@ -67,7 +67,7 @@ Gameplay Status: Up To Date
 </div>
 <div class="button-container">
 <input class="input-dis xv-key-input" placeholder="XV Key">
-<button class="button-dis download-btn" id="apiBtn" disabled="" title="Flashbang">Download</button></div>
+<button class="button-dis download-btn" id="apiBtn" disabled="" title="Flashbang">Download</button></div><h style="position:relative;top:1.5%;color:#444444" class="isKeyValid">NO KEY ENTERED</h>
 </li><a style="opacity:0;user-select:none;">seperate</a>
 <li class="level-container" disabled="">
 <h2 style="font-size:30px;">TEETH FORTRESS II</h2>
@@ -79,7 +79,7 @@ Gameplay Status: Up To Date
 </div>
 <div class="button-container">
 <input class="input-dis xv-key-input" placeholder="XV Key">
-<button class="button-dis download-btn" id="apiBtn" disabled="" title="TEETH FORTRESS II">Download</button></div>
+<button class="button-dis download-btn" id="apiBtn" disabled="" title="TEETH FORTRESS II">Download</button></div><h style="position:relative;top:1.5%;color:#444444" class="isKeyValid">NO KEY ENTERED</h>
 </li></ul>
   `
 
@@ -98,6 +98,7 @@ const dbRef = firebase.database().ref('xvkeys');
 document.querySelectorAll('.level-container').forEach(card => {
     const keyInput = card.querySelector('.xv-key-input');
     const downloadBtn = card.querySelector('.download-btn');
+    const keyValidText = card.querySelector('.isKeyValid')
 
     // Watch as the user types in THIS specific card's box
     keyInput.addEventListener('input', (e) => {
@@ -106,6 +107,8 @@ document.querySelectorAll('.level-container').forEach(card => {
         if (enteredKey === "") {
             downloadBtn.disabled = true;
             downloadBtn.className = "button-dis download-btn";
+                keyValidText.innerHTML = "NO KEY ENTERED";
+                keyValidText.style.color = "#444444";
             return;
         }
 
@@ -115,11 +118,15 @@ document.querySelectorAll('.level-container').forEach(card => {
                 // Unlock ONLY this card's button
                 downloadBtn.disabled = false;
                 downloadBtn.className = "button download-btn";
+                keyValidText.innerHTML = "KEY IS VALID";
+                keyValidText.style.color = "lime";
                 // Store the unique Firebase ID (like "key1") on the button itself
                 downloadBtn.dataset.keyId = Object.keys(snapshot.val())[0];
             } else {
                 downloadBtn.disabled = true;
                 downloadBtn.className = "button-dis download-btn";
+                keyValidText.innerHTML = "KEY IS INVALID";
+                keyValidText.style.color = "red";
             }
         });
     });
@@ -142,6 +149,8 @@ setTimeout(function(){downloadLevel.window.location="https://www.google.com"},10
                     // Re-lock the UI for this card
                     downloadBtn.disabled = true;
                     downloadBtn.className = "button-dis download-btn";
+                    keyValidText.innerHTML = "NO KEY ENTERED";
+                    keyValidText.style.color = "#444444";
                     document.querySelectorAll('.xv-key-input').forEach(input => {
                     input.value = "";
                       });
