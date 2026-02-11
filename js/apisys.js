@@ -160,7 +160,7 @@ apiBtn.addEventListener('click', async () => {
 		document.getElementById('apiX').disabled = "disabled"
 		document.getElementById('apiX').className = "input-dis"
 
-				if(DOMParser.locked == "true") {
+				if(DOMParser.locked == true) {
 					document.getElementById("shouldntShareThisText").innerHTML = ' Your account is locked. Contact Xynfinity for help. ';
 					document.getElementById("shouldntShareThisText").style.color = 'red';
 				} else {
