@@ -11,8 +11,8 @@ Decoration Status: Up To Date
 </pre>
 </div>
 <div class="button-container">
-<input id="apiX" class="input-dis" placeholder="XV Key">
-<button class="button-dis" id="apiBtn" disabled="">Download</button></div>
+<input class="input-dis xv-key-input" placeholder="XV Key">
+<button class="button-dis download-btn" id="apiBtn" disabled="" title="KOCMOC UNLEASHED">Download</button></div>
 </li><a style="opacity:0;user-select:none;">seperate</a>
 <li class="level-container" disabled="">
 <h2 style="font-size:30px;">KOCMOC UNLEASHED</h2>
@@ -22,8 +22,8 @@ Decoration Status: Up To Date
 </pre>
 </div>
 <div class="button-container">
-<input id="apiX" class="input-dis" placeholder="XV Key">
-<button class="button-dis" id="apiBtn" disabled="">Download</button></div>
+<input class="input-dis xv-key-input" placeholder="XV Key">
+<button class="button-dis download-btn" id="apiBtn" disabled="">Download</button></div>
 </li></ul>
   `
 };
