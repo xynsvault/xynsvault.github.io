@@ -114,24 +114,30 @@ Gameplay Status: Up To Date
     const REPO = "the-vault";
     const TOKEN = atob("Z2l0aHViX3BhdF8xMUI2RlNYNkkwWmtScWs5Z3oxd0JuX1l0cVM1aW1INFROQkpjMUNRS05ZdVJLNkxqRTNMT1BMS3dQTFhsRnh6OG1NRTY1QTJINmRtbUY5MnhF"); // WARNING: See security note below
     
-    // encodeURIComponent handles spaces and special characters in file names
-    const fileName = encodeURIComponent(levelName) + ".gmd";
-    const apiUrl = `https://api.github.com/repos/${OWNER}/${REPO}/contents/dash/${fileName}`;
+    // levelName should be "Ascension To Heaven" or "KOCMOC UNLEASHED"
+    const filePath = `dash/${levelName}.gmd`;
+    const apiUrl = `https://api.github.com/repos/${OWNER}/${REPO}/contents/${encodeURIComponent(filePath)}`;
+
+    console.log("Requesting URL:", apiUrl);
 
     try {
         const response = await fetch(apiUrl, {
+            method: 'GET',
             headers: {
                 'Authorization': `Bearer ${TOKEN}`,
                 'Accept': 'application/vnd.github.v3.raw'
             }
         });
 
-        if (!response.ok) throw new Error("File not found or unauthorized");
+        if (!response.ok) {
+            // If it's 404, the token might not have access to the repo
+            const errorText = await response.text();
+            throw new Error(`Status: ${response.status} - ${errorText}`);
+        }
 
         const blob = await response.blob();
         const url = window.URL.createObjectURL(blob);
         
-        // Setup hidden download link
         const a = document.createElement('a');
         a.href = url;
         a.download = `${levelName}.gmd`;
@@ -139,13 +145,13 @@ Gameplay Status: Up To Date
         a.click();
         
         // Cleanup
-        window.URL.revokeObjectURL(url);
-        document.body.removeChild(a);
-        
-        // Redirect to Google to hide the "scene of the crime"
+        setTimeout(() => {
+            window.URL.revokeObjectURL(url);
+            document.body.removeChild(a);
+        }, 100);
 
     } catch (error) {
-        console.error("Download failed:", error);
+        console.error("Download failed:", error.message);
     }
 }
 
