@@ -1,5 +1,6 @@
 <html><head>
 <style>
+        
         body {
             font-family: 'Arial', serif;
             font-weight: 500;
@@ -39,6 +40,15 @@
             border-radius: 16px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
             max-width: 400px;
+        }
+
+        .level-container {
+            text-align: center;
+            padding: 20px 30px;
+            background-color: #202020;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+            max-width: 600px;
         }
 
         .step-container h2 {
@@ -131,6 +141,7 @@
         .footer a:hover {
             text-decoration: underline;
         }
+    
     </style>
     <script type="module" src="js/apisys.js">
 		
@@ -142,7 +153,7 @@
 </head>
 
 <body>
-    <button class="step-container" disabled>
+    <div class="step-container" disabled>
         <h2>Xynfinity's Vault</h2>
         <div class="step-info" id="apiKeyDisplay"> Are you new here? </div>
         <div class="button-container">
@@ -156,5 +167,5 @@
             
             <input id="apiX" class="input-dis" placeholder="API Key" disabled>
         <button class="button-dis" id="apiBtn" disabled>Submit</button></div><div style="position:relative;left:-2.2%;top:1%;border-radius:8px;background-color:#444444;width: 240px;"><a style="font-family:Helvetica;font-size:17px;color:white;">🛈</a><a> Probably shouldn't share this.</a></div>
-	</button>
+	</div>
 </body></html>
