@@ -190,7 +190,11 @@
         
         if (levelName.includes(filter)) {
             li.style.display = ""; // Show it
-        } else {
+			li.style.position = "fixed";
+			li.style.top = "15%";
+        } if (filter == "") {
+			li.style="";
+		} else {
             li.style.display = "none"; // Hide it
         }
     });
