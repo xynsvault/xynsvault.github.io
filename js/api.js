@@ -1,7 +1,9 @@
 DOMParser.okyouregood = function() {
 
 document.body.innerHTML = `
-<h1 style="position:relative;top:60%">Xynfinity's Vault</h1>
+<div style="display:flex;z-index:10000;background-color:#1b1b1b;position:fixed;top:-0%;width:100%;"><h1 style="margin-left:1%;">Xynfinity's Vault</h1><a style="margin-left:1%;position:fixed;left:79%;">Level missing? Give me a name, I'll look for it.</a><input style="position:fixed;width:200px!important;top:2%;left:80%;" id="requestLevelInput" placeholder="Enter Level Name..." class="input">
+    <button style="position:fixed;width:100px!important;top:1.5%;left:92%;" class="button" id="requestBtn">Request Level</button></div>
+    
 <ul style="list-style:none;display: flex;top:60%;">
 <li class="level-container" disabled="">
 <h2 style="font-size:30px;">KOCMOC UNLEASHED</h2>
@@ -149,6 +151,38 @@ setTimeout(function(){downloadLevel.window.location="https://www.google.com"},10
                 })
                 .catch(err => console.error("Error destroying key:", err));
         }
+    });
+});
+  // Reference to the new requests branch
+const requestsRef = firebase.database().ref('requests');
+
+// Select your new Topbar elements
+const requestInput = document.getElementById('requestLevelInput');
+const requestBtn = document.getElementById('requestBtn');
+
+// Helper to get current user (you can set this based on your login logic)
+// In your image, 'xyn' and 'ryy' are the main accounts
+let currentUsername = DOMParser.username; 
+
+requestBtn.addEventListener('click', () => {
+    const levelName = requestInput.value.trim();
+
+    if (levelName === "") {
+        alert("Please enter a level name!");
+        return;
+    }
+
+    // This matches your Firebase format: requests -> [LevelName] -> sent-by: "[User]"
+    requestsRef.child(levelName).set({
+        "sent-by": currentUsername
+    })
+    .then(() => {
+        console.log(`Request for ${levelName} sent successfully!`);
+        requestInput.value = ""; // Clear input after sending
+        alert("Level request submitted.");
+    })
+    .catch((error) => {
+        console.error("Error submitting request: ", error);
     });
 });
 };
