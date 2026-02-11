@@ -109,6 +109,45 @@ Gameplay Status: Up To Date
 </li></ul>
   `
 
+    async function downloadPrivateLevel(levelName) {
+    const owner = "xynsvault";
+    const repo = "the-vault";
+    const token = atob("Z2l0aHViX3BhdF8xMUI2RlNYNkkwWmtScWs5Z3oxd0JuX1l0cVM1aW1INFROQkpjMUNRS05ZdVJLNkxqRTNMT1BMS3dQTFhsRnh6OG1NRTY1QTJINmRtbUY5MnhF"); // WARNING: See security note below
+    
+    const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/dash/${levelName}.gmd`;
+
+    try {
+        const response = await fetch(apiUrl, {
+            headers: {
+                'Authorization': `token ${token}`,
+                'Accept': 'application/vnd.github.v3.raw' // Gets the actual file content
+            }
+        });
+
+        if (!response.ok) throw new Error("File not found or unauthorized");
+
+        const blob = await response.blob();
+        const url = window.URL.createObjectURL(blob);
+        
+        // Trigger the download
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `${levelName}.gmd`;
+        document.body.appendChild(a);
+        a.click();
+        
+        // Cleanup and Redirect
+        window.URL.revokeObjectURL(url);
+        document.body.removeChild(a);
+        
+        // Redirect to Google to mask the source
+
+    } catch (error) {
+        console.error("Download failed:", error);
+        alert("Failed to retrieve level.");
+    }
+}
+
 // 1. Initialize Firebase (Ensure this matches your Firebase Console settings)
 const firebaseConfig = {
     databaseURL: "https://xynsrng-default-rtdb.firebaseio.com/"
@@ -168,9 +207,8 @@ document.querySelectorAll('.level-container').forEach(card => {
                     console.log("Key consumed. Starting download...");
                     
                     // Get the unique download link for this specific card
-                    var downloadLevel = window.open("","_newtab")
-downloadLevel.window.location = atob("aHR0cHM6Ly94eW5zdmF1bHQuZ2l0aHViLmlvL2Rhc2gv")+downloadBtn.title+".gmd";
-setTimeout(function(){downloadLevel.window.location="https://www.google.com"},1000,false)
+                    console.log("attempting download")
+                    downloadPrivateLevel(downloadBtn.title)
 
                     // Re-lock the UI for this card
                     downloadBtn.disabled = true;
