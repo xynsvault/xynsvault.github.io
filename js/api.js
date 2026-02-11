@@ -86,7 +86,9 @@ setTimeout(function(){downloadLevel.window.location="https://www.google.com"},10
                     // Re-lock the UI for this card
                     downloadBtn.disabled = true;
                     downloadBtn.className = "button-dis download-btn";
-                    keyInput.value = "";
+                    document.querySelectorAll('.xv-key-input').forEach(input => {
+                    input.value = "";
+    });
                 })
                 .catch(err => console.error("Error destroying key:", err));
         }
