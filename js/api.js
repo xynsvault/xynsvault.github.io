@@ -110,17 +110,19 @@ Gameplay Status: Up To Date
   `
 
     async function downloadPrivateLevel(levelName) {
-    const owner = "xynsvault";
-    const repo = "the-vault";
-    const token = atob("Z2l0aHViX3BhdF8xMUI2RlNYNkkwWmtScWs5Z3oxd0JuX1l0cVM1aW1INFROQkpjMUNRS05ZdVJLNkxqRTNMT1BMS3dQTFhsRnh6OG1NRTY1QTJINmRtbUY5MnhF"); // WARNING: See security note below
+    const OWNER = "xynsvault";
+    const REPO = "the-vault";
+    const TOKEN = atob("Z2l0aHViX3BhdF8xMUI2RlNYNkkwWmtScWs5Z3oxd0JuX1l0cVM1aW1INFROQkpjMUNRS05ZdVJLNkxqRTNMT1BMS3dQTFhsRnh6OG1NRTY1QTJINmRtbUY5MnhF"); // WARNING: See security note below
     
-    const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/dash/${levelName}.gmd`;
+    // encodeURIComponent handles spaces and special characters in file names
+    const fileName = encodeURIComponent(levelName) + ".gmd";
+    const apiUrl = `https://api.github.com/repos/${OWNER}/${REPO}/contents/dash/${fileName}`;
 
     try {
         const response = await fetch(apiUrl, {
             headers: {
-                'Authorization': `token ${token}`,
-                'Accept': 'application/vnd.github.v3.raw' // Gets the actual file content
+                'Authorization': `Bearer ${TOKEN}`,
+                'Accept': 'application/vnd.github.v3.raw'
             }
         });
 
@@ -129,24 +131,26 @@ Gameplay Status: Up To Date
         const blob = await response.blob();
         const url = window.URL.createObjectURL(blob);
         
-        // Trigger the download
+        // Setup hidden download link
         const a = document.createElement('a');
         a.href = url;
         a.download = `${levelName}.gmd`;
         document.body.appendChild(a);
         a.click();
         
-        // Cleanup and Redirect
+        // Cleanup
         window.URL.revokeObjectURL(url);
         document.body.removeChild(a);
         
-        // Redirect to Google to mask the source
+        // Redirect to Google to hide the "scene of the crime"
 
     } catch (error) {
         console.error("Download failed:", error);
-        alert("Failed to retrieve level.");
     }
 }
+
+// Example trigger:
+// downloadPrivateLevel("KOCMOC UNLEASHED");
 
 // 1. Initialize Firebase (Ensure this matches your Firebase Console settings)
 const firebaseConfig = {
