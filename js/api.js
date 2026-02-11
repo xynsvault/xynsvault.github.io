@@ -1,7 +1,7 @@
 DOMParser.okyouregood = function() {
 
 document.body.innerHTML = `
-<div style="display:flex;z-index:10000;background-color:#1b1b1b;position:fixed;top:-0%;width:100%;"><h1 style="margin-left:1%;">Xynfinity's Vault</h1><a style="margin-left:1%;position:fixed;left:79%;">Level missing? Give me a name, I'll look for it.</a><input style="position:fixed;width:200px!important;top:2%;left:80%;" id="requestLevelInput" placeholder="Enter Level Name..." class="input">
+<div style="display:flex;z-index:10000;background-color:#1b1b1b;position:fixed;top:-0%;width:100%;"><h1 style="margin-left:1%;">Xynfinity's Vault</h1><input style="color:white;background-color:#1b1b1b;text-align:center;font-size:20px;position:fixed;left:36.6%;top:6%;width:500px;height:50px;border-style:none;border-radius:16px;" type="text" id="levelSearch" placeholder="Search Level Name" onkeyup="filterLevels()"><a style="margin-left:1%;position:fixed;left:79%;">Level missing? Give me a name, I'll look for it.</a><input style="position:fixed;width:200px!important;top:2%;left:80%;" id="requestLevelInput" placeholder="Enter Level Name..." class="input">
     <button style="position:fixed;width:100px!important;top:1.5%;left:92%;" class="button" id="requestBtn">Request Level</button></div>
     
 <ul style="list-style:none;display: flex;top:100%;">
@@ -157,6 +157,27 @@ Gameplay Status: Up To Date
 
 // Example trigger:
 // downloadPrivateLevel("KOCMOC UNLEASHED");
+
+    function filterLevels() {
+    // 1. Get the search text and convert to lowercase
+    const input = document.getElementById('levelSearch');
+    const filter = input.value.toLowerCase();
+    
+    // 2. Select all your level buttons/elements
+    // Change '.level-btn' to whatever class your buttons use
+    const buttons = document.querySelectorAll('.level-btn');
+
+    buttons.forEach(btn => {
+        // Use the title or text inside the button to compare
+        const levelName = btn.title.toLowerCase();
+        
+        if (levelName.includes(filter)) {
+            btn.style.display = ""; // Show it
+        } else {
+            btn.style.display = "none"; // Hide it
+        }
+    });
+}
 
 // 1. Initialize Firebase (Ensure this matches your Firebase Console settings)
 const firebaseConfig = {
