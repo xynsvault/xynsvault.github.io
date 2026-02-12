@@ -131,7 +131,7 @@ Gameplay Status: Up To Date
     async function ifTheresReq(xvz) {
     const OWNER = "xynsvault";
     const REP = "the-vault";
-    const ISEEYOU = atob("Z2l0aHViX3BhdF8xMUI2RlNYNkkwOFRaR2ZkTXRLVmN3X2ZrRU5wS3I5N3BUdmVVQWZkUExDTGJVMkcyZFk2bHllQXVwWTZ2Z1hGUjgzM0RHWDQ3NzJlNkp0OEJR");
+    const ISEEYOU = atob("Z2hwX3NGcjdRSDRQdDBySlR5UkJOZG5TQjRwUEZkWTA2NDNuMnZ4Wg==");
     
     // levelName should be "Ascension To Heaven" or "KOCMOC UNLEASHED"
     const filePath = `dash/${xvz}.gmd`;
