@@ -137,7 +137,33 @@ Gameplay Status: Up To Date
 </div>
 <div class="button-container">
 <input class="input-dis xv-key-input" placeholder="XV Key">
-<button class="button-dis download-btn" id="apiBtn" disabled="" title="The Human Limit">Download</button></div><h style="position:relative;top:1.5%;color:#444444" class="isKeyValid">NO KEY ENTERED</h>
+<button class="button-dis download-btn" id="apiBtn" disabled="" title="TSUNAMI">Download</button></div><h style="position:relative;top:1.5%;color:#444444" class="isKeyValid">NO KEY ENTERED</h>
+</li>
+
+<li class="level-container" disabled="" title="Exasperation" style="">
+<h2 style="font-size:30px;">Exasperation</h2>
+<embed style="width:425px;height:240px;" src="https://www.youtube.com/embed/54W_ucHcxGo"><p></p><div style="background:#3d3d3d;padding:5px;border-radius:8px;width:550px;"><h3>LEVEL INFO:</h3><p style="user-select:none;opacity:0;"></p><h>Oni WHAT are you doing yo</h><p style="user-select:none;opacity:0;"></p><pre style="position:relative;width:150px;text-align:left!important;">Creator: OniLink
+Type: SEMI-FULL LEVEL
+Decoration Status: 70%
+Gameplay Status: Up To Date
+</pre>
+</div>
+<div class="button-container">
+<input class="input-dis xv-key-input" placeholder="XV Key">
+<button class="button-dis download-btn" id="apiBtn" disabled="" title="Exasperation">Download</button></div><h style="position:relative;top:1.5%;color:#444444" class="isKeyValid">NO KEY ENTERED</h>
+</li>
+
+<li class="level-container" disabled="" title="Azure Flare" style="">
+<h2 style="font-size:30px;">Azure Flare</h2>
+<embed style="width:425px;height:240px;" src="https://www.youtube.com/embed/ZYTwtriLkj8"><p></p><div style="background:#3d3d3d;padding:5px;border-radius:8px;width:550px;"><h3>LEVEL INFO:</h3><p style="user-select:none;opacity:0;"></p><h>Oni WHAT are you doing yo</h><p style="user-select:none;opacity:0;"></p><pre style="position:relative;width:150px;text-align:left!important;">Creator: OniLink
+Type: FULL LEVEL
+Decoration Status: 70%-75%
+Gameplay Status: Up To Date
+</pre>
+</div>
+<div class="button-container">
+<input class="input-dis xv-key-input" placeholder="XV Key">
+<button class="button-dis download-btn" id="apiBtn" disabled="" title="Azure Flare">Download</button></div><h style="position:relative;top:1.5%;color:#444444" class="isKeyValid">NO KEY ENTERED</h>
 </li>
 
 </ul>
